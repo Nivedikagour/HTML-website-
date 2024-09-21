@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Colorful Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-color: #ff6b81;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #ffeaa7;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(to right, #ff4757, #ff6b81);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: #fff;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 4em;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .hero a {
+            padding: 15px 30px;
+            background-color: #ffeaa7;
+            color: #ff4757;
+            font-size: 1.2em;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .hero a:hover {
+            background-color: #f39c12;
+            color: #fff;
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 20px;
+            text-align: center;
+            background-color: #f39c12;
+            color: #fff;
+        }
+
+        .about h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            padding: 100px 20px;
+            text-align: center;
+            background-color: #74b9ff;
+        }
+
+        .portfolio h2 {
+            font-size: 3em;
+            margin-bottom: 40px;
+            color: #2d3436;
+        }
+
+        .portfolio .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .portfolio .projects .project {
+            background-color: #ff7675;
+            padding: 20px;
+            border-radius: 10px;
+            color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .portfolio .projects .project:hover {
+            transform: scale(1.05);
+        }
+
+        .portfolio .projects .project img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 20px;
+            text-align: center;
+            background-color: #55efc4;
+        }
+
+        .contact h2 {
+            font-size: 3em;
+            margin-bottom: 40px;
+            color: #2d3436;
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact form input, .contact form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1.1em;
+        }
+
+        .contact form button {
+            padding: 15px 30px;
+            background-color: #00b894;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact form button:hover {
+            background-color: #00cec9;
+        }
+
+        /* Footer */
+        footer {
+            padding: 20px;
+            text-align: center;
+            background-color: #2d3436;
+            color: #fff;
+        }
+
+        footer a {
+            color: #ff7675;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #ffeaa7;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">My Portfolio</div>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="home" class="hero">
+    <h1>Hello, I'm Nivedika Gour</h1>
+    <p>A Passionate Web Developer
+    wanna amalgamate my creative skills with technology to produce best outcomes!!</p>
+    <a href="#portfolio">See My Work</a>
+</section>
+
+<section id="about" class="about">
+    <h2>About Me</h2>
+    <p>I am a creative web developer with a knack for building dynamic, user-friendly websites. I specialize in front-end development and have a strong understanding of responsive design and modern web technologies.</p>
+</section>
+
+<section id="portfolio" class="portfolio">
+    <h2>My Portfolio</h2>
+    <div class="projects">
+        <div class="project">
+           <p>I've done ✅ many projects and solved many complex tasks here are list of things I've done . </p>
+            <h3>Project 1</h3>
+            <p>
+
+Project Title: Inventory Management System Using Java
+
+Project Overview:
+
+This project is a Java-based Inventory Management System designed to help businesses efficiently manage their stock and inventory. The system allows users to perform essential inventory operations such as adding new products, updating stock levels, tracking inventory, and generating reports. This project showcases the use of Object-Oriented Programming (OOP) concepts, file handling, and basic database management techniques in Java.
+
+Objectivand updating stock information, ensuring accuracy and erated that summarize the inventory status, such as st
+</p>
+        </div>
+        <div class="project">
+            
+            <h3>Project 2</h3>
+            <p>This project is an Autonomous Drone Navigation System developed using C++. It leverages real-time data from sensors (such as GPS, cameras, and LiDAR) to enable a drone to autonomously navigate through a predefined area, avoid obstacles, and reach its destination efficiently. The project implements advanced algorithms like A pathfinding*, sensor fusion, and PID control for smooth and accurate drone control..</p>
+        </div>
+        <div class="project">
+          
+            <h3>Project 3</h3>
+           <p>This project is an AI-Powered Predictive Healthcare System that utilizes advanced machine learning algorithms and neural networks to predict patient health outcomes. By analyzing large datasets of patient medical records, the AI model can predict the likelihood of diseases such as diabetes, heart disease, or cancer, enabling early diagnosis and personalized treatment plans.</p>
+        </div>
+    
+
+
+          <div class="project">
+          <h3>Skills</h3>
+            <p>java </p>
+            <p>javascript </p>
+            <p>CSS,HTML </p>
+            <p>SHH</p>
+            <p>C,C++ </p>  
+            <p>AI generation </p>     
+           </script></p>
+       </div>
+       
+
+          <div class="project">
+          <h3>Other Skills</h3>
+            <p>Project management </p>
+            <p>Project head </p>
+            <p>leadership </p>
+            <p>Problem solving</p>
+            <p>Logical thinking</p>  
+            <p>Debugging </p>     
+           </script></p>
+       </div>
+       
+       
+          <div class="project">
+          <h3>Soft Skills</h3>
+            <p>Honest </p>
+            <p>Curious </p>
+            <p>Helpfull </p>
+            <p>Kind</p>
+      
+           </script></p>
+       </div>
+       
+          <div class="project">
+          <h3>WORK EXPERIENCE</h3>
+            <p>Yash technologies,as a web designer</p>
+            <p>TCS,as a software engg.</p>
+            <p> Infosis currently,as a software engg.</p>
+            
+            
+            
+           </script></p>
+       </div>
+       
+       
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2024 Nivedika Gour. All Rights Reserved.</p>
+    <p>Follow me on <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
+</footer>
+
+</body>
+</html
